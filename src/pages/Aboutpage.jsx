@@ -22,7 +22,7 @@ export function Aboutpage() {
               </div>
               <div className="md:w-1/2">
                 <div className="flex space-x-4">
-                  <div className="bg-neutral-900/70 shadow-lg rounded-lg p-4 flex-1">
+                  <div className="bg-neutral-900/70 shadow-lg rounded-lg p-4 flex-1 border-2 border-transparent bg-clip-border border-gradient-to-r from-green-400 via-teal-400 to-blue-400">
                     <h2 className="text-xl font-semibold mb-3 bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 text-transparent bg-clip-text">
                       Our Mission
                     </h2>
@@ -30,7 +30,7 @@ export function Aboutpage() {
                       Our mission is to simplify task management and help individuals and teams achieve their goals through effective organization and productivity tools.
                     </p>
                   </div>
-                  <div className="bg-neutral-900/70 shadow-lg rounded-lg p-4 flex-1">
+                  <div className="bg-neutral-900/70 shadow-lg rounded-lg p-4 flex-1 border-2 border-transparent bg-clip-border border-gradient-to-r from-yellow-400 via-orange-400 to-red-400">
                     <h2 className="text-xl font-semibold mb-3 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-transparent bg-clip-text">
                       Why Choose ToDo?
                     </h2>
@@ -42,7 +42,7 @@ export function Aboutpage() {
               </div>
             </div>
             <div className="mt-8">
-              <div className="bg-neutral-900/70 shadow-lg rounded-lg p-4 max-w-lg mx-auto">
+              <div className="bg-neutral-900/70 shadow-lg rounded-lg p-4 max-w-lg mx-auto border-2 border-transparent bg-clip-border border-gradient-to-r from-pink-400 via-red-400 to-yellow-400">
                 <h2 className="text-xl font-semibold mb-3 text-center bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 text-transparent bg-clip-text">
                   Key Features
                 </h2>
@@ -58,8 +58,10 @@ export function Aboutpage() {
             </div>
           </div>
         </div>
+        <Footer />
       </BackgroundBeamsWithCollision>
-      <Footer />
+      
     </div>
   );
 }
+

@@ -52,9 +52,6 @@ export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center mt-4">
       <Navbar activePath={currentPath} className="top-7" />
-      <p className="text-black dark:text-white text-center">
-        The Navbar will show on top of the page
-      </p>
     </div>
   );
 }
@@ -131,3 +128,4 @@ function Navbar({ className, activePath }) {
 }
 
 export default NavbarDemo;
+

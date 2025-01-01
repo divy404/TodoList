@@ -123,7 +123,7 @@ const Homepage = () => (
       </motion.h2>
 
       <Link
-        to="/get-started"
+        to="/login"
         className="mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white font-semibold text-base sm:text-lg rounded-full border-2 border-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-black hover:border-transparent transition-all duration-300 shadow-md"
       >
         Get Started
