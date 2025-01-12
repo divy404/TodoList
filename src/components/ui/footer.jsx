@@ -5,7 +5,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="absolute bottom-0 left-0 w-full bg-gray-900 text-white py-4 px-6 sm:px-12 flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
+    <footer className="w-full bg-gray-900 text-white py-4 px-6 sm:px-12 flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0 fixed bottom-0 left-0">
       {/* Left Links */}
       <div className="flex flex-col space-y-2 items-center md:items-start">
         <Link to="/" className="hover:text-gray-400 transition duration-200">

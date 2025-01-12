@@ -67,29 +67,8 @@ const GlobeDemo = () => {
   );
 };
 
-const AnimatedLogo = () => (
-  <motion.div
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: "easeOut" }}
-    className="absolute top-9 left-9 z-20 flex items-center space-x-2"
-  >
-    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" />
-    <motion.h1
-      className="text-lg sm:text-xl font-bold text-white"
-      whileHover={{ scale: 1.1 }}
-      transition={{ duration: 0.3 }}
-    >
-      ToDo
-    </motion.h1>
-  </motion.div>
-);
-
 const Homepage = () => (
   <div className="relative h-screen w-screen overflow-hidden">
-    {/* Animated Logo */}
-    <AnimatedLogo />
-
     {/* Navbar */}
     <NavbarDemo />
 
