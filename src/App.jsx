@@ -6,6 +6,7 @@ import { Aboutpage } from "./pages/Aboutpage";
 import Contactpage from "./pages/Contactpage";
 import Loginpage from "./pages/Loginpage";
 import Registerpage from "./pages/Registerpage";
+import Todopage from "./pages/Todopage";
 
 
 export default function App() {
@@ -17,6 +18,8 @@ export default function App() {
         <Route path="/contact" element={<Contactpage/>} />
         <Route path="/login" element={<Loginpage/>} />
         <Route path="/register" element={<Registerpage/>} />
+        <Route path="/todo" element={<Todopage/>} />
+        
 
        
       </Routes>

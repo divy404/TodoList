@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import NavbarDemo from '../components/ui/navbar-menu';
 import Footer from '../components/ui/footer';
+import { useNavigate } from 'react-router-dom';
 
 function Button({ value }) {
+  const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
+    navigate('/todo');
   };
 
   return (
