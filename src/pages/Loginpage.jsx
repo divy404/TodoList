@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import NavbarDemo from '../components/ui/navbar-menu';
 import Footer from '../components/ui/footer';
 import { useNavigate } from 'react-router-dom';
+import { BackgroundBeamsWithCollision } from '../components/ui/background-beams-with-collision';
 
 function Button({ value }) {
   const navigate = useNavigate();
@@ -92,7 +93,10 @@ function Loginpage() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       <NavbarDemo />
+      <BackgroundBeamsWithCollision className="absolute inset-0 z-0">
       <LoginForm />
+      
+      </BackgroundBeamsWithCollision>
       <Footer />
     </div>
   );
