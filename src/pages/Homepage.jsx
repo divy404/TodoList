@@ -96,7 +96,7 @@ const Homepage = () => (
         transition={{ duration: 1, ease: "easeOut" }}
         className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gradient from-blue-500 to-purple-500"
       >
-        <span className="hover:text-blue-400 transition-colors duration-300">
+        <span className="hover:text-red-400 transition-colors duration-300">
           with your ToDo
         </span>
       </motion.h2>
