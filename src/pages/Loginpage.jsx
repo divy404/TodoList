@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import NavbarDemo from '../components/ui/navbar-menu';
 import Footer from '../components/ui/footer';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ function Button({ value }) {
   return (
     <button 
       onClick={handleClick}
-      className="mt-6 transition-all block py-3 px-4 w-full text-white font-bold rounded cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-400 hover:from-indigo-700 hover:to-purple-500 focus:bg-indigo-900 transform hover:-translate-y-1 hover:shadow-lg">
+      className="mt-6 transition-all block py-3 px-4 w-full text-white font-bold rounded cursor-pointer bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-black focus:bg-black transform hover:-translate-y-1 hover:shadow-lg">
       {value}
     </button>
   );
@@ -22,7 +22,7 @@ function Button({ value }) {
 
 function Input({ type, id, name, label, placeholder, autofocus, value, onChange }) {
   return (
-    <label className="text-gray-500 block mt-3">
+    <label className="text-gray-300 block mt-3">
       {label}
       <input
         autoFocus={autofocus}
@@ -32,7 +32,7 @@ function Input({ type, id, name, label, placeholder, autofocus, value, onChange 
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="rounded px-4 py-3 w-full mt-1 bg-white text-gray-900 border border-gray-200 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-100"
+        className="rounded px-4 py-3 w-full mt-1 bg-gray-800 text-white border border-gray-700 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-100"
       />
     </label>
   );
@@ -60,14 +60,13 @@ function PasswordInput({ label, placeholder }) {
       <button
         type="button"
         onClick={togglePasswordVisibility}
-        className="absolute inset-y-0 right-3 flex items-center text-gray-500"
-      >
+        className="absolute inset-y-0 right-3 flex items-center text-gray-500">
         {showPassword ? "Hide" : "Show"}
       </button>
-      <a href="/forgot-password" className="text-indigo-600 hover:text-indigo-800 text-sm mt-2 block">
+      <a href="/forgot-password" className="text-indigo-400 hover:text-indigo-600 text-sm mt-2 block">
         Forgot Password?
       </a>
-      <a href="/register" className="text-indigo-600 hover:text-indigo-800 text-sm mt-1 block">
+      <a href="/register" className="text-indigo-400 hover:text-indigo-600 text-sm mt-1 block">
         Create an Account
       </a>
     </div>
@@ -77,8 +76,8 @@ function PasswordInput({ label, placeholder }) {
 function LoginForm() {
   return (
     <div className="flex justify-center items-center min-h-[90vh] w-screen">
-      <div className="border-t-8 rounded-sm border-indigo-600 bg-white p-12 shadow-2xl w-96">
-        <h1 className="font-bold text-center block text-2xl">Log In</h1>
+      <div className="rounded-lg p-12 shadow-[0_35px_100px_0_rgba(0,0,0,0.8)] w-96 mx-4">
+        <h1 className="font-bold text-center block text-2xl text-white">Log In</h1>
         <form>
           <Input type="email" id="email" name="email" label="Email Address" placeholder="Enter your email..." autofocus={true} />
           <PasswordInput label="Password" placeholder="••••••••••" />
@@ -91,11 +90,10 @@ function LoginForm() {
 
 function Loginpage() {
   return (
-    <div className="min-h-screen flex flex-col overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-black text-white overflow-auto">
       <NavbarDemo />
       <BackgroundBeamsWithCollision className="absolute inset-0 z-0">
-      <LoginForm />
-      
+        <LoginForm />
       </BackgroundBeamsWithCollision>
       <Footer />
     </div>
@@ -103,3 +101,5 @@ function Loginpage() {
 }
 
 export default Loginpage;
+
+

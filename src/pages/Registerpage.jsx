@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import NavbarDemo from '../components/ui/navbar-menu';
 import Footer from '../components/ui/footer';
+import { BackgroundBeamsWithCollision } from '../components/ui/background-beams-with-collision';
+import { useNavigate } from 'react-router-dom';
 
 function Button({ value }) {
+  const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
+    navigate('/todo');
   };
 
   return (
-    <button
+    <button 
       onClick={handleClick}
-      className="mt-6 transition-all block py-3 px-4 w-full text-white font-bold rounded cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-400 hover:from-indigo-700 hover:to-purple-500 focus:bg-indigo-900 transform hover:-translate-y-1 hover:shadow-lg">
+      className="mt-6 transition-all block py-3 px-4 w-full text-white font-bold rounded cursor-pointer bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-black focus:bg-black transform hover:-translate-y-1 hover:shadow-lg">
       {value}
     </button>
   );
@@ -18,7 +22,7 @@ function Button({ value }) {
 
 function Input({ type, id, name, label, placeholder, autofocus, value, onChange }) {
   return (
-    <label className="text-gray-500 block mt-3">
+    <label className="text-gray-300 block mt-3">
       {label}
       <input
         autoFocus={autofocus}
@@ -28,7 +32,7 @@ function Input({ type, id, name, label, placeholder, autofocus, value, onChange 
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="rounded px-4 py-3 w-full mt-1 bg-white text-gray-900 border border-gray-200 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-100"
+        className="rounded px-4 py-3 w-full mt-1 bg-gray-800 text-white border border-gray-700 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-100"
       />
     </label>
   );
@@ -56,8 +60,7 @@ function PasswordInput({ label, placeholder }) {
       <button
         type="button"
         onClick={togglePasswordVisibility}
-        className="absolute inset-y-0 right-3 flex items-center text-gray-500"
-      >
+        className="absolute inset-y-0 right-3 flex items-center text-gray-500">
         {showPassword ? "Hide" : "Show"}
       </button>
     </div>
@@ -66,7 +69,7 @@ function PasswordInput({ label, placeholder }) {
 
 function OTPInput({ label, placeholder, value, onChange }) {
   return (
-    <label className="text-gray-500 block mt-3">
+    <label className="text-gray-300 block mt-3">
       {label}
       <input
         type="text"
@@ -75,7 +78,7 @@ function OTPInput({ label, placeholder, value, onChange }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="rounded px-4 py-3 w-full mt-1 bg-white text-gray-900 border border-gray-200 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-100"
+        className="rounded px-4 py-3 w-full mt-1 bg-gray-800 text-white border border-gray-700 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-100"
       />
     </label>
   );
@@ -94,8 +97,8 @@ function RegisterForm() {
 
   return (
     <div className="flex justify-center items-center min-h-[90vh] w-screen">
-      <div className="border-t-8 rounded-sm border-indigo-600 bg-white p-12 shadow-2xl w-96">
-        <h1 className="font-bold text-center block text-2xl">Create Account</h1>
+      <div className="rounded-lg p-12 shadow-[0_35px_100px_0_rgba(0,0,0,0.8)] w-96 mx-4">
+        <h1 className="font-bold text-center block text-2xl text-white">Create Account</h1>
         <form>
           <Input
             type="email"
@@ -119,14 +122,13 @@ function RegisterForm() {
             <button
               type="button"
               onClick={handleOtpSend}
-              className="mt-3 w-full py-3 px-4 text-white font-bold rounded bg-gradient-to-r from-indigo-600 to-purple-400 hover:from-indigo-700 hover:to-purple-500 focus:bg-indigo-900"
-            >
+              className="mt-3 w-full py-3 px-4 text-white font-bold rounded bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-black focus:bg-black">
               Send OTP
             </button>
           )}
           <Button value="Register" />
         </form>
-        <a href="/login" className="text-indigo-600 hover:text-indigo-800 text-sm mt-2 block text-center">
+        <a href="/login" className="text-indigo-400 hover:text-indigo-600 text-sm mt-2 block text-center">
           Already have an account? Log In
         </a>
       </div>
@@ -136,13 +138,16 @@ function RegisterForm() {
 
 function Registerpage() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-black text-white overflow-auto">
       <NavbarDemo />
-      <RegisterForm />
+      <BackgroundBeamsWithCollision className="absolute inset-0 z-0">
+        <RegisterForm />
+      </BackgroundBeamsWithCollision>
       <Footer />
     </div>
   );
 }
 
 export default Registerpage;
+
 

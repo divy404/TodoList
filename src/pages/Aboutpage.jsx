@@ -1,9 +1,7 @@
 import React from "react";
 import NavbarDemo from "../components/ui/navbar-menu";
 import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
-import Footer from "../components/ui/footer"; // Import Footer
-import { Link } from 'react-router-dom';
-import { FaTwitter, FaInstagram, FaDiscord } from 'react-icons/fa';
+import Footer from "../components/ui/footer"; 
 
 export function Aboutpage() {
   console.log("Rendering Aboutpage");
@@ -56,6 +54,7 @@ export function Aboutpage() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       <NavbarDemo />
+      <div className="flex-1 relative"></div>
       <BackgroundBeamsWithCollision className="absolute inset-0 z-0">
         {/* This section allows the content to be scrollable */}
         <div className="flex-grow overflow-y-auto">
@@ -68,6 +67,3 @@ export function Aboutpage() {
     </div>
   );
 }
-
-
-
